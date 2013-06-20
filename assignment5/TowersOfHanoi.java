@@ -182,11 +182,6 @@ public class TowersOfHanoi
     	}
     	
     	//"from" has no disc to move
-    	if (from == 'A' && towerA.size() <= 0)
-    	{
-    		System.err.println("Abort! Illegal tower char ID!");
-    		throw new Exception();
-    	}
     	int take=-1, put=-1;
     	boolean flag = false;
     	switch(from){
@@ -213,7 +208,7 @@ public class TowersOfHanoi
     	}
     	if (flag)
     	{
-    		System.err.println("Abort! Illegal tower char ID!");
+    		System.err.println("Abort! Illegal tower request!");
     		throw new Exception();
     	}
     	    	
@@ -234,7 +229,7 @@ public class TowersOfHanoi
     	
     	if (take > put)
     	{
-    		System.err.println("Abort! Illegal tower char ID!");
+    		System.err.println("Abort! Illegal disc movement!");
     		throw new Exception();
     	}
     	
