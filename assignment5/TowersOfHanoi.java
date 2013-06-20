@@ -215,13 +215,22 @@ public class TowersOfHanoi
     	//Big disc on top of little disc
     	switch(to){
     	case 'A':
-    		put = towerA.peek();
+    		if (towerA.isEmpty())
+    			put = take+1;
+    		else
+    			put = towerA.peek();
     		break;
     	case 'B':
-    		put = towerB.peek();
+    		if (towerB.isEmpty())
+    			put = take+1;
+    		else
+    			put = towerB.peek();
     		break;
     	case 'C':
-    		put = towerC.peek();
+    		if (towerC.isEmpty())
+    			put = take+1;
+    		else
+    			put = towerC.peek();
     		break;
     	default:
     		return;
